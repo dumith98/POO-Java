@@ -5,17 +5,17 @@ public class Vhs {
     private String nomeDaFita;
     private int unidadesDisponiveis;
     private Filial filial;
-    private Censura censura;
+    private Classificacao classificacao;
 
     public Vhs() {
     }
 
-    public Vhs(int id, String nomeDaFita, int unidadesDisponiveis, Filial filial, Censura censura){
+    public Vhs(int id, String nomeDaFita, int unidadesDisponiveis, Filial filial, Classificacao classificacao){
         this.id = id;
         this.nomeDaFita = nomeDaFita;
         this.unidadesDisponiveis = unidadesDisponiveis;
         this.filial = filial;
-        this.censura = censura;
+        this.classificacao = classificacao;
     }
 
     public int getId() {
@@ -60,12 +60,12 @@ public class Vhs {
         }
     }
 
-    public Censura getCensura() {
-        return censura;
+    public Classificacao getClassificacao() {
+        return classificacao;
     }
 
-    public void setCensura(Censura censura) {
-        this.censura = censura;
+    public void setClassificacao(Classificacao classificacao) {
+        this.classificacao = classificacao;
     }
 
     public void Devolver(){
@@ -80,7 +80,7 @@ public class Vhs {
                 ", nomeDaFita='" + nomeDaFita + '\'' +
                 ", unidadesDisponiveis=" + unidadesDisponiveis +
                 ", filial=" + filial +
-                ", censura=" + censura +
+                ", censura=" + classificacao +
                 '}';
     }
 }
