@@ -1,7 +1,6 @@
 import entities.Censura;
 import entities.Filial;
 import entities.Vhs;
-import entities.subclasses.Familia;
 
 public class program {
 
@@ -13,6 +12,14 @@ public class program {
         cinderela.Alugar();
         cinderela.Alugar();
         cinderela.Devolver();
-        cinderela.Tipo();
+        System.out.println(cinderela.getNomeDaFita());
+        System.out.println(cinderela.getFilial());
+        familia.Tipo();
+
+
+        Vhs pinoquio = new Vhs(2, "Pinóquio", 40, new Filial(2, "Belo Horizonte", "rua de belo horizonte"), new Censura("A"));
+        pinoquio.Alugar();
+        pinoquio.Devolver();
+        System.out.println(pinoquio.getFilial());
     }
 }

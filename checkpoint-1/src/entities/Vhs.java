@@ -59,11 +59,19 @@ public class Vhs {
             System.out.println("Não há unidades disoniveis para alugar");
         }
     }
-   public void Devolver(){
+
+    public Censura getCensura() {
+        return censura;
+    }
+
+    public void setCensura(Censura censura) {
+        this.censura = censura;
+    }
+
+    public void Devolver(){
         unidadesDisponiveis += 1;
         System.out.println("Você devovleu uma unidade da fita " + getNomeDaFita() + ". Agora restam " + getUnidadesDisponiveis() + ".");
    }
-
 
     @Override
     public String toString() {
@@ -72,6 +80,8 @@ public class Vhs {
                 ", nomeDaFita='" + nomeDaFita + '\'' +
                 ", unidadesDisponiveis=" + unidadesDisponiveis +
                 ", filial=" + filial +
+                ", censura=" + censura +
                 '}';
     }
 }
+
